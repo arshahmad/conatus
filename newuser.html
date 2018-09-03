@@ -1,0 +1,131 @@
+<html>
+<head>
+<title>
+Login
+</title>
+<style>
+#k
+{
+ margin-left:230px;
+ margin-top:20px;
+}
+#p
+{
+ color:black;
+}
+*
+{
+ color:grey;
+}
+#i
+{
+ color:white;
+}
+h1
+{
+ color:#E8350E;
+}
+p
+{
+ color:black;
+}
+</style>
+<script>
+function val()
+{
+  
+  var l=document.getElementById('p').value;
+   var i=document.getElementById('cp').value;
+var m=document.getElementById('ph').value;
+   var o=document.getElementById('em').value;
+
+  if(l.length==0)
+{
+  alert("Enter Password");
+  return;
+}
+  else if(l.length<8)
+{
+  alert("Password should be of minimum length of 8 characters");
+   return;
+}else
+  if(i!==l)
+{
+  alert("Password and Confirm Password Doesn't Match");
+  return;
+}else
+  if(m.length<10)
+{
+  alert("Phone number must contain atleast 10 digits");
+  return;
+}else
+  if(o.length==0)
+{
+  alert("Enter Email");
+  return;
+}
+else  
+{
+window.location="congo2.html";
+}
+}
+</script>
+</head>
+<body background="w2.jpg">
+
+<div style="height:5%; width:100%;">
+</div>
+<div style="height:70%; width:30%; float:left">
+</div>
+<div style="height:19%; width:40%; float:left;">
+<center><img src="S.png" height="80%" width="100%"></center><br>
+</div>
+<div style="height:60%; width:40%; float:left;">
+<form>
+<table cellpadding="20">
+<tr>
+<td>
+First Name:</td>
+<td ><input type="text" name="f" id="f" placeholder="First Name" size="40" required></td>
+</tr>
+<tr>
+<td>
+Last Name:</td>
+<td><input type="text" name="l" id="l" placeholder="Last Name" size="40" required></td>
+</tr>
+<tr>
+<td>
+Username:</td>
+<td ><input type="text" name="u" id="u" placeholder="Username" size="40" required></td>
+</tr>
+<tr>
+<td>
+Password:</td>
+<td><input type="password" name="p" id="p" placeholder="Password" size="40" required></td>
+</tr>
+<tr>
+<td>
+Confirm Password:</td>
+<td><input type="password" name="cp" id="cp" placeholder="Confirm Password" size="40" required></td>
+</tr>
+<tr>
+<td>
+Phone:</td>
+<td>
+<input type="TEXT"  name="ph" id="ph" placeholder="xxxx xxxx xx" size="40" required></td>
+</tr>
+<tr>
+<td>
+Email:</td>
+<td><input type="email" name="em" id="em" placeholder="Email@gmail.com" size="40" required></td>
+</tr>
+</table>
+<table id="k" width="20">
+<tr>
+<td>
+<center><input id="popo" type="button" value="Submit" onclick="val()"></center></td>
+</tr>
+</table>
+</div>
+</body>
+</html>
